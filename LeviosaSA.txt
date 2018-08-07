@@ -5,8 +5,8 @@
  */
 definition(
 		name: "Leviosa WiShadeController Service Manager",
-		namespace: "atlascoder",
-		author: "Leviosashades",
+		namespace: "Leviosa",
+		author: "LeviosaShades",
 		description: "A Controller that can manage motorized shade from mobile App in Home or via Internet",
 		category: "My apps",
 		iconUrl: "https://s3.us-east-2.amazonaws.com/leviosa-pub/Icon-48.png",
