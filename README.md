@@ -4,7 +4,7 @@ code for insertion into Samsung SmartThings for Leviosa Motor Shades
 Create or sign into your account:
 https://account.smartthings.com
 
-Choose "My SmartApps" tab at top
+Choose "My SmartApps" tab at top <br>
 Choose "+ New SmartApp" at upper left.
 Choose "From code" tab
 Copy and paste code from LeviosaSA.txt file in Github
