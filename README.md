@@ -1,6 +1,19 @@
 # SmartThings
 code for insertion into Samsung SmartThings for Leviosa Motor Shades
 
+Create or sign into your account:
 https://account.smartthings.com
-Copy and paste text from SA to SmartApp and DH to Device Handler
+
+Choose "My SmartApps" tab at top
+Choose "+ New SmartApp" at upper left.
+Choose "From code" tab
+Copy and paste code from LeviosaSA.txt file in Github
+Choose "Create" at bottom right of page.
+
+Choose "My Device Handlers" tab at top
+Choose "+ Create New Device Handler" at upper left.
+Choose "From code" tab
+Copy and paste code from LeviosaDH.txt file in Github
+Choose "Create" at bottom right of page.
+
 Save, and publish "For Me"
