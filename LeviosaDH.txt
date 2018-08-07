@@ -14,7 +14,7 @@
  *
  */
 metadata {
-	definition (name: "LeviosaController", namespace: "atlascoder", author: "Anton Titkov") {
+	definition (name: "LeviosaController", namespace: "Leviosa", author: "LeviosaShades") {
 		capability "Window Shade"
         command "raise"
         command "lower"
