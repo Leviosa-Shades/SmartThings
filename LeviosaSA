@@ -152,7 +152,7 @@ def addDevices() {
 
 		if (!d) {
 			log.debug "Creating Window Blind Device with dni: ${dni}"
-			addChildDevice("atlascoder", "LeviosaController", dni, selectedDevice?.value.hub, [
+			addChildDevice("Leviosa", "LeviosaController", dni, selectedDevice?.value.hub, [
 				"label": selectedDevice?.value?.name ?: "LeviosaController",
 				"data": [
 					"mac": selectedDevice.value.mac,
