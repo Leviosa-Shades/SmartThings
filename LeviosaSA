@@ -1,12 +1,11 @@
 /**
  *  Leviosa Shades Smart App
  *
- *	Version 1.1
  */
 definition(
-		name: "Leviosa Zone Service Manager",
+		name: "Leviosa WiShadeController Service Manager",
 		namespace: "Leviosa",
-		author: "LeviosaShades",
+		author: "Leviosashades",
 		description: "A Controller that can manage motorized shade from mobile App in Home or via Internet",
 		category: "My apps",
 		iconUrl: "https://s3.us-east-2.amazonaws.com/leviosa-pub/Icon-48.png",
@@ -17,26 +16,26 @@ definition(
 
 preferences {
 	page(name: "searchTargetSelection", title: "Shade Groups Setup", nextPage: "deviceDiscovery") {
-		section("To connect your Shade Groups, you must first have signed into the App and setup a Leviosa Zone.  If not, no Leviosa Shade groups will be discovered.") {	
-		}
-		
+		section("Your Leviosa Zone must be setup correctly already before they will be successfully Discovered.") {}
+		section("Choose 'Next' to begin Discovery.")
 	}
 	page(name: "deviceDiscovery", title: "Shade Groups Discovery", content: "deviceDiscovery")
+}
+
+def getSelectedDevices() {
+	def list = []
+	def devices = getVerifiedDevices()
+	devices.each {
+		list << it.value.ssdpUSN.split(':')[1]
+	}
+    list
 }
 
 def deviceDiscovery() {
 
 	state.searchTarget = "urn:schemas-upnp-org:service:TwoWayMotor:1"
-
+    
 	log.debug "Discovery start for ${state.searchTarget}"
-
-	def options = [:]
-	def devices = getVerifiedDevices()
-	devices.each {
-    	def key = it.value.ssdpUSN.split(':')[1]
-		def value = it.value.name ?: "Group ${key}"
-		options["${key}"] = value
-	}
 
 	ssdpSubscribe()
 
@@ -44,8 +43,27 @@ def deviceDiscovery() {
 	verifyDevices()
 
 	return dynamicPage(name: "deviceDiscovery", title: "Discovery Started!", nextPage: "", refreshInterval: 5, install: true, uninstall: true) {
-		section("Please wait while we discover your shade groups (6 per Zone) which can take 1-3 minutes.") {
-			input "selectedDevices", "enum", required: false, title: "Select Groups (${options.size() ?: 0} found)", multiple: true, options: options
+		section("Please wait while shade groups are discovered, which can take a few minutes.") {
+        	def l = getSelectedDevices().size()
+            if (l == 0) {
+        		paragraph "No controllers discovered yet.."
+            }
+        	else if (l == 1) {
+        		paragraph "1 shade group discovered."
+            paragraph "Every controller has 6 groups, please wait.."
+            }
+            else if (l < 6) {
+        		paragraph "${l} shade groups discovered."
+	            paragraph "Every controller has 6 groups, please wait.."
+            }
+            else if (l == 6) {
+        		paragraph "6 shade groups discovered."
+	            paragraph "If you have only 1 controller - press Save to continue. Otherwise - please wait.."
+            }
+            else {
+        		paragraph "${l} shade groups discovered."
+	            paragraph "For every controller of 6 groups, please wait until all groups are discovered."
+            }
 		}
 	}
 }
@@ -69,10 +87,12 @@ def initialize() {
 	unschedule()
 
 	ssdpSubscribe()
+    
+    def selectedDevices = getSelectedDevices()
 
 	log.debug "Selected devices: ${selectedDevices}"
 
-	if (selectedDevices) {
+	if (selectedDevices.size() > 0) {
 		addDevices()
 	}
 
@@ -80,10 +100,12 @@ def initialize() {
 }
 
 void ssdpDiscover() {
+	log.debug "lan discovery ${state.searchTarget}"
 	sendHubCommand(new physicalgraph.device.HubAction("lan discovery ${state.searchTarget}", physicalgraph.device.Protocol.LAN))
 }
 
 void ssdpSubscribe() {
+	log.debug "subscribing to ${state.searchTarget}"
 	subscribe(location, "ssdpTerm.${state.searchTarget}", ssdpHandler)
 }
 
@@ -127,6 +149,8 @@ def addDevices() {
     log.debug "Selected devices: ${selectedDevices}"
     
     def selDevs = []
+    
+    def selectedDevices = getSelectedDevices()
     
     if (selectedDevices instanceof String) {
         selDevs << selectedDevices
