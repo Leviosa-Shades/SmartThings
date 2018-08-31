@@ -1,5 +1,6 @@
 # SmartThings
 code for insertion into Samsung SmartThings for Leviosa Motor Shades
+Required equipment:  SmartThings hub and registered account, Leviosa Zone and registered account.
 
 Create or sign into your account:
 https://account.smartthings.com
@@ -20,7 +21,7 @@ Choose "Create" at bottom right of page.<br>
 Choose "Save".<br>
 Choose "Publish" and then choose the popup "For Me".<br>
 
-Open SmartThings (Classic) Ap on your Smart device.  You should be logged in the same as your account above.<br>
+Open SmartThings (Classic) Ap on your Smart device.  You must be logged in the same as your account above.<br>
 Note:  Samsung SmrtThings has 2 Apps currently active during their transition.  Only the Classic version supports Shades such as Leviosa.<br><br>
 Choose "Automation" on the bottom tabs.<br>
 Select "SmartApps" on the upper right.<br>
@@ -32,4 +33,4 @@ Select "Next" on upper right.<br>
 When 6 groups (or multiples of 6 for multiple controllers) are discovered, select "Save" on upper right.<br>
 Select "My Home" tab on bottom.  Choose "Things" (top tabs) to see the listings on your Leviosa Groups.<br>
 You can edit namse for any group.<br><br>
-Enjoy Leviosa Shade on SmartThings!<br>
+Enjoy Leviosa Motor Shades on SmartThings!<br>
