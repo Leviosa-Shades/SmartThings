@@ -25,11 +25,11 @@ Note:  Samsung SmrtThings has 2 Apps currently active during their transition.  
 Choose "Automation" on the bottom tabs.<br>
 Select "SmartApps" on the upper right.<br>
 Choose "+ Add a SmartApp".<br>
-Scroll tot he bottom, choose "My Apps".<br>
+Scroll to the bottom, choose "My Apps".<br>
 Choose "Leviosa WiShade Controller..."<br>
 Select "Next" on upper right.<br>
-"Discovery" will start.  Wait until all Leviosa groups are discovered.<br>
-When 6 (or multiples of 6) are discovered, select "Save" on upper right.<br>
+"Discovery" will start, and numbers of shade groups will be discovered.  Wait until all Leviosa groups are discovered.<br>
+When 6 groups (or multiples of 6 for multiple controllers) are discovered, select "Save" on upper right.<br>
 Select "My Home" tab on bottom.  Choose "Things" (top tabs) to see the listings on your Leviosa Groups.<br>
-You can edit name for any group.<br><br>
+You can edit namse for any group.<br><br>
 Enjoy Leviosa Shade on SmartThings!<br>
