@@ -1,6 +1,6 @@
 # SmartThings
-code for insertion into Samsung SmartThings for Leviosa Motor Shades
-Required equipment:  SmartThings hub and registered account, Leviosa Zone and registered account.
+code for insertion into Samsung SmartThings for Leviosa Motor Shades<br>
+Required equipment:  SmartThings hub and registered account, Leviosa Zone and registered account.<br>
 
 Create or sign into your account:
 https://account.smartthings.com
