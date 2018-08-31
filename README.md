@@ -1,5 +1,5 @@
 # SmartThings
-code for insertion into Samsung SmartThings for Leviosa Motor Shades<br>
+Leviosa is actively partnering with Samsung for formal Device inclusion.  This will take a few more weeks.  In the meantime, users can use these instructions for Samsung SmartThings to control Leviosa Motor Shades<br>
 Required equipment:  SmartThings hub and registered account, Leviosa Zone and registered account.<br>
 
 Create or sign into your account:
