@@ -16,7 +16,7 @@ definition(
 
 preferences {
 	page(name: "searchTargetSelection", title: "Shade Groups Setup", nextPage: "deviceDiscovery") {
-		section("Your Leviosa Zone must be setup correctly already before they will be successfully Discovered.") {}
+		section("Your Leviosa Zone must be setup correctly already before Groups will be successfully Discovered.") {}
 		section("Choose 'Next' to begin Discovery.")
 	}
 	page(name: "deviceDiscovery", title: "Shade Groups Discovery", content: "deviceDiscovery")
@@ -43,21 +43,21 @@ def deviceDiscovery() {
 	verifyDevices()
 
 	return dynamicPage(name: "deviceDiscovery", title: "Discovery Started!", nextPage: "", refreshInterval: 5, install: true, uninstall: true) {
-		section("Please wait while shade groups are discovered, which can take a few minutes.") {
+		section("Please wait while shade Groups are discovered, which can take a few minutes.") {
         	def l = getSelectedDevices().size()
             if (l == 0) {
-        		paragraph "No controllers discovered yet.."
+        		paragraph "No Groups discovered yet.."
             }
         	else if (l == 1) {
         		paragraph "1 shade group discovered."
-            paragraph "Every controller has 6 groups, please wait.."
+            paragraph "Every controller has 6 Groups, please wait.."
             }
             else if (l < 6) {
         		paragraph "${l} shade groups discovered."
-	            paragraph "Every controller has 6 groups, please wait.."
+	            paragraph "Every controller has 6 Groups, please wait.."
             }
             else if (l == 6) {
-        		paragraph "6 shade groups discovered."
+        		paragraph "6 shade Groups discovered."
 	            paragraph "If you have only 1 controller - press Save to continue. Otherwise - please wait.."
             }
             else {
