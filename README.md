@@ -29,7 +29,7 @@ Choose "+ Add a SmartApp".<br>
 Scroll to the bottom, choose "My Apps".<br>
 Choose "Leviosa WiShade Controller..."<br>
 Select "Next" on upper right.<br>
-"Discovery" will start, and numbers of shade groups will be discovered.  Wait until all Leviosa groups are discovered.<br>
+"Discovery" will start, and numbers of shade groups will be discovered.  Wait until all Leviosa groups are discovered (should take less than 1 minute).<br>
 When 6 groups (or multiples of 6 for multiple controllers) are discovered, select "Save" on upper right.<br>
 Select "My Home" tab on bottom.  Choose "Things" (top tabs) to see the listings on your Leviosa Groups.<br>
 You can edit namse for any group.<br><br>
