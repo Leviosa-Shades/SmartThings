@@ -21,8 +21,8 @@ Choose "Create" at bottom right of page.<br>
 Choose "Save".<br>
 Choose "Publish" and then choose the popup "For Me".<br>
 
-Open SmartThings (Classic) Ap on your Smart device.  You must be logged in the same as your account above.<br>
-Note:  Samsung SmrtThings has 2 Apps currently active during their transition.  Only the Classic version supports Shades such as Leviosa.<br><br>
+Open SmartThings (Classic) Ap on your Smart device.  You must be logged in the same as your ST account above.<br>
+Note:  Samsung SmartThings has 2 Apps currently active during their transition.  Only the Classic version supports Shades such as Leviosa.<br><br>
 Choose "Automation" on the bottom tabs.<br>
 Select "SmartApps" on the upper right.<br>
 Choose "+ Add a SmartApp".<br>
